@@ -1,4 +1,4 @@
-import { Container, Content, Nav, StyledRoot, StyledTrigger, StyledPortal, StyledContent, StyledLabel, StyledRadioGroup, StyledRadioItem, StyledItemIndicator, Menu } from "./styles";
+import { Container, Content, Nav, StyledRoot, StyledTrigger, StyledPortal, StyledContent, StyledLabel, StyledRadioGroup, StyledRadioItem, Menu } from "./styles";
 import { availableThemes, useTheme } from "../../../../hooks/theme";
 import { TbPaint } from 'react-icons/tb';
 
@@ -11,6 +11,7 @@ export function Header() {
   return (
     <Container>
       <Menu>
+
         <Content>
           <Nav href="#Home">Home</Nav>
           <Nav href="#About">About</Nav>
@@ -20,15 +21,18 @@ export function Header() {
         </Content>
 
         <StyledRoot>
+
           <StyledTrigger>
             <TbPaint size={20} color={iconColor}/>
           </StyledTrigger>
 
           <StyledPortal>
-            <StyledContent>              
+            <StyledContent>  
+
               <StyledLabel>
                 Themes
               </StyledLabel>
+
                 <StyledRadioGroup
                 value={theme.id}
                 onValueChange={( value : string ) => toggleTheme(value as availableThemes)}
@@ -68,67 +72,13 @@ export function Header() {
                   <StyledRadioItem value="yellow" >
                       Yellow
                   </StyledRadioItem>
+
                 </StyledRadioGroup>
-              </StyledContent>
-            </StyledPortal>
-          </StyledRoot>
-        </Menu>          
-      </Container>
-    )
-  }
 
-/*
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-export default () => (
-
-  <DropdownMenu.Root>//
-
-    <DropdownMenu.Trigger /> //
-    <DropdownMenu.Portal> //
-
-      <DropdownMenu.Content>//
-
-        <DropdownMenu.Label />//
-
-        <DropdownMenu.Item />
-        <DropdownMenu.Group>
-
-          <DropdownMenu.Item />
-
-        </DropdownMenu.Group>
-        <DropdownMenu.CheckboxItem>
-
-          <DropdownMenu.ItemIndicator />
-
-        </DropdownMenu.CheckboxItem>
-        <DropdownMenu.RadioGroup>
-
-          <DropdownMenu.RadioItem>
-
-            <DropdownMenu.ItemIndicator />
-
-          </DropdownMenu.RadioItem>
-
-        </DropdownMenu.RadioGroup>
-        <DropdownMenu.Sub>
-
-          <DropdownMenu.SubTrigger />
-
-          <DropdownMenu.Portal>
-
-            <DropdownMenu.SubContent />
-
-          </DropdownMenu.Portal>
-
-        </DropdownMenu.Sub>
-        <DropdownMenu.Separator />
-
-        <DropdownMenu.Arrow />
-
-      </DropdownMenu.Content>
-
-    </DropdownMenu.Portal>
-
-  </DropdownMenu.Root>
-
-); */
+            </StyledContent>
+          </StyledPortal>
+        </StyledRoot>
+      </Menu>          
+    </Container>
+  )
+}

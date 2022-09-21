@@ -21,12 +21,20 @@ export const Content = styled.header`
     align-items: center;
     gap: 3rem;
 
+    @media (max-width: 720px) {
+        gap: 1rem;
+    }
+
 
 `
 
 export const Nav = styled.a`
     font-weight: 300;
     color: ${props => props.theme.headerText};
+
+    @media (max-width: 720px) {
+        font-weight: 400;
+    }
 
 `
 
@@ -62,6 +70,11 @@ export const StyledTrigger = styled(DropdownMenu.Trigger)`
     
     position: absolute;
     right: 0;
+
+    @media (max-width: 720px) {
+        position: absolute;
+        right: 2rem;
+    }
 
 `
 

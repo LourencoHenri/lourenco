@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { ReactElement, useContext, useEffect, useState } from "react";
 import { createContext } from "react";
 import { DefaultTheme } from "styled-components";
 import { blueTheme } from "../styles/themes/blue";
@@ -20,7 +20,6 @@ export interface ThemeModel extends DefaultTheme, CommonThemeModel {
     third: string;
 
     iconColor?: string;
-
 }
 
 export interface CommonThemeModel {
@@ -38,7 +37,7 @@ interface ThemeContextData {
 
 const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData) 
 
-const ThemeProvider : React.FC = ({ children } : any ) => {
+const ThemeProvider : React.FC<{ children : ReactElement }> = ({ children } : any ) => {
 
     const [theme, setTheme] = useState<ThemeModel>(grayTheme)
 

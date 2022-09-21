@@ -8,6 +8,7 @@ export function Main() {
     
     return (
         <Container id="Home">
+            
             <Content>
                 <span>Hello, I'm</span>
                 <h1>Henrique Lourenço_</h1>

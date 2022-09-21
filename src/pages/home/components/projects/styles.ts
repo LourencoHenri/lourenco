@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    //display: flex;
-    //flex-direction: column;
     background: ${props => props.theme.background};
     padding-top: 5rem;
+
+    @media (max-width: 720px) {
+
+    }
 
 `
 
 export const Content = styled.div`
     max-width: 1120px;
     margin: 0 auto;
+
+    @media (max-width: 720px) {
+        width: 70%;
+    }
 
 `
 
@@ -21,7 +27,7 @@ export const Title = styled.h2`
 
 `
 
-export const SubTitle = styled.div` //h2
+export const SubTitle = styled.div` 
     margin-top: 1rem;
     text-align: center;
     font-size: 1.5rem;
@@ -40,6 +46,11 @@ export const Box = styled.div`
     grid-template-columns: repeat(3, 1fr);
     margin-top: 4rem;
     gap: 5rem;
+
+    @media (max-width: 720px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 `
 
 export const Card = styled.div`
@@ -52,6 +63,7 @@ export const Card = styled.div`
     &:hover {
         box-shadow: 0px 1px 10px 1px ${props => props.theme.shadow};
     }
+
 `
 
 export const CardImg = styled.div`
@@ -63,6 +75,10 @@ export const CardImg = styled.div`
 
     img {
         height: 100%;
+    }
+
+    @media (max-width: 720px) {
+        height: 15rem;
     }
 `
 

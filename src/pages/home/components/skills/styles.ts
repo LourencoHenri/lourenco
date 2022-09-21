@@ -7,6 +7,10 @@ export const Container = styled.div`
     background: ${props => props.theme.background};   
     height: 25rem;
 
+    @media (max-width: 720px) {
+        height: 100%;
+    }
+
 `
 
 export const Content = styled.div`
@@ -14,12 +18,19 @@ export const Content = styled.div`
     max-width: 1120px;
     margin: 0 auto;
 
-
+    @media (max-width: 720px) {
+        width: 90%;
+    }
 `
 
 export const MySkills = styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 720px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);  
+    }
 
 `
 

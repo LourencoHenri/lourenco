@@ -1,8 +1,7 @@
 import { Box, Container, Contacts, Title, Content, CallToAction, ContactContents } from "./styles";
 
-import { SiGithub, SiGmail, SiInstagram, SiLinkedin, SiMicrosoftoutlook } from 'react-icons/si';
+import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from 'react-icons/si';
 
-import { HiOutlineMail } from 'react-icons/hi';
 import { useTheme } from "styled-components";
 import { ThemeModel } from "../../../../hooks/theme";
 
@@ -16,7 +15,11 @@ export function Contact() {
     return (
         <Container id="Contact">
             <Content>
-                <Title>Contact</Title>
+
+                <Title>
+                    Contact
+                </Title>
+
                 <Box>
                     <Contacts>
 
@@ -33,15 +36,18 @@ export function Contact() {
                         </ContactContents>
 
                         <ContactContents>
-                            <HiOutlineMail size={32} color={iconColor} />henri.lourenco@outlook.com                            
+                            <SiGmail size={28} color={iconColor} />henri.lourenco@outlook.com                            
                         </ContactContents>
                           
                     </Contacts>
+
                     <CallToAction>
                         <h3>Contact me</h3>
                         <h2>Let's work together!</h2>
                     </CallToAction>
+                    
                 </Box>
+                
             </Content>
         </Container>
     )
